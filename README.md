@@ -1,5 +1,7 @@
 # eth-tether
 
+![Diagrama de red que muestra la configuración de eth-tether para compartir internet por WiFi a Ethernet. El diagrama muestra un host Linux con Debian o Ubuntu y conexión WiFi a un router/ISP. El host ejecuta NetworkManager con método IPv4 compartido, reglas de iptables para reenvío de alta prioridad y NAT/Masquerade, y un servidor DHCP/DNS para la configuración automática del cliente. Tres dispositivos cliente están conectados mediante un switch Ethernet: PC, portátil y tableta cliente. El diagrama muestra la omisión de iptables y NetworkManager con configuración efímera. El contenedor Docker se muestra como omitido. Todos los componentes están conectados mediante líneas de red que indican el flujo de datos en un estilo de ilustración técnica claro.](/images/eth-tether-banner.png)
+
 **eth-tether** es una utilidad de CLI ligera para Linux (Debian/Ubuntu) que comparte la conexión de Internet WiFi a través de un puerto Ethernet de manera efímera.
 
 Diseñado específicamente para resolver conflictos de enrutamiento en entornos de desarrollo que utilizan **Docker**, donde las reglas de firewall predeterminadas suelen bloquear el tráfico compartido.
