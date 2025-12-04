@@ -55,7 +55,7 @@ Diseñado específicamente para resolver conflictos de enrutamiento en entornos 
 6. ¡Listo! Ahora puedes ejecutar `eth-tether` desde cualquier ubicación en tu sistema.
 
     ```bash
-    sudo eth-tether.sh
+    sudo eth-tether
     ```
 
 4.  **Detener:** Presione `q` o `Ctrl+C` para detener la compartición y restaurar las reglas de firewall originales.

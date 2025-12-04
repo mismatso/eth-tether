@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # ==============================================================================
-# Script: compartir_net.sh
+# Script: eth-tether.sh
 # Descripción: Comparte Internet de WiFi a Ethernet de forma efímera.
-# Autor: Generado para Ingeniero (CTO/Docente)
-# Entorno: Debian 12 (NetworkManager + iptables)
+# Autor: Misael Matamoros (mismatso)
+# Entorno: Debian 12+ (NetworkManager + iptables)
 # ==============================================================================
 
 # Colores para salida
@@ -15,7 +15,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Nombre de la conexión temporal de NetworkManager
-CON_NAME="TEMP_SHARE_BRIDGE"
+CON_NAME="RED_COMPARTIDA_ETH"
 
 # Verificación de privilegios de root
 if [ "$EUID" -ne 0 ]; then
@@ -110,8 +110,8 @@ aplicar_reglas_firewall() {
 trap "limpieza; exit" INT TERM EXIT
 
 # Banner
-echo "=========================================="
-echo "   COMPARTIR INTERNET (Debian 12 Tool)    "
+echo "======================================================"
+echo "   ETH TETHERING (Compartir Internet por Ethernet)    "
 echo "=========================================="
 
 detectar_interfaces
